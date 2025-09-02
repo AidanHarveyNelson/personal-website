@@ -103,7 +103,7 @@ export default function Home() {
               <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mt-2 group-hover:scale-150 transition-transform duration-300"></div>
               <div>
                 <h3 className="font-bold text-xl mb-3 text-gray-800">Data Warehouse Migration Program</h3>
-                <p className="text-gray-600 leading-relaxed">Completed 4 on-premises data warehouse migrations to Snowflake, leveraging real-time ingestion tools such as Kafka to minimize lag from source systems to warehouse platform. Reduced data latency by 85% and achieved 99.9% uptime while cutting infrastructure costs by $2.3M annually.</p>
+                <p className="text-gray-600 leading-relaxed">Completed 4 on-premises data warehouse migrations to Snowflake, leveraging real-time ingestion tools such as Kafka to minimize lag from source systems to warehouse platform. Reduced data latency by 85% and achieved 99.9% uptime.</p>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function Home() {
               <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full mt-2 group-hover:scale-150 transition-transform duration-300"></div>
               <div>
                 <h3 className="font-bold text-xl mb-3 text-gray-800">DevOps Transformation Initiative</h3>
-                <p className="text-gray-600 leading-relaxed">Modernized company&apos;s development process by implementing comprehensive CI/CD pipelines using GitLab CI, Terraform for Infrastructure as Code, and automated testing frameworks. Reduced production bugs by 78%, decreased deployment time from 4 hours to 12 minutes, and achieved 95% deployment success rate across staging and production environments.</p>
+                <p className="text-gray-600 leading-relaxed">Modernized company&apos;s development process by implementing comprehensive CI/CD pipelines using GitLab CI, Terraform for Infrastructure as Code, and automated testing frameworks. Reduced production bugs by 78%, decreased deployment time from 4 hours to 12 minutes, and achieved 95% deployment success rate across production environments.</p>
               </div>
             </div>
           </div>
