@@ -24,10 +24,10 @@ export default function Home() {
         <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 text-center">About Me</h2>
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
           <p className="text-lg leading-relaxed text-gray-700 mb-6">
-            Hi, I'm Aidan Harvey-Nelson, a data and analytics specialist with extensive experience in transforming raw data into strategic business value. I help organizations build robust data infrastructure, implement advanced analytics solutions, and leverage AI to drive decision-making and operational efficiency. With a proven track record of delivering enterprise-scale data migrations, real-time integration architectures, and predictive analytics models, I bring both technical depth and business acumen to every project.
+            Hi, I&apos;m Aidan Harvey-Nelson, a data and analytics specialist with extensive experience in transforming raw data into strategic business value. I help organizations build robust data infrastructure, implement advanced analytics solutions, and leverage AI to drive decision-making and operational efficiency. With a proven track record of delivering enterprise-scale data migrations, real-time integration architectures, and predictive analytics models, I bring both technical depth and business acumen to every project.
           </p>
           <p className="text-lg leading-relaxed text-gray-700">
-            My expertise spans the full data lifecycle - from architecting scalable data warehouses and implementing CI/CD pipelines to developing machine learning models that deliver measurable business impact. I've successfully led complex migrations to cloud platforms like Snowflake, built microservice architectures connecting diverse enterprise systems, and modernized development practices that have reduced deployment times and improved system reliability. Whether you're looking to unlock insights from your data, modernize your infrastructure, or implement AI-driven solutions, I'm passionate about helping organizations harness the power of their data to achieve transformational results.
+            My expertise spans the full data lifecycle - from architecting scalable data warehouses and implementing CI/CD pipelines to developing machine learning models that deliver measurable business impact. I&apos;ve successfully led complex migrations to cloud platforms like Snowflake, built microservice architectures connecting diverse enterprise systems, and modernized development practices that have reduced deployment times and improved system reliability. Whether you&apos;re looking to unlock insights from your data, modernize your infrastructure, or implement AI-driven solutions, I&apos;m passionate about helping organizations harness the power of their data to achieve transformational results.
           </p>
         </div>
       </section>
@@ -121,7 +121,7 @@ export default function Home() {
               <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full mt-2 group-hover:scale-150 transition-transform duration-300"></div>
               <div>
                 <h3 className="font-bold text-xl mb-3 text-gray-800">DevOps Transformation Initiative</h3>
-                <p className="text-gray-600 leading-relaxed">Modernized company's development process by implementing comprehensive CI/CD pipelines using GitLab CI, Terraform for Infrastructure as Code, and automated testing frameworks. Reduced production bugs by 78%, decreased deployment time from 4 hours to 12 minutes, and achieved 95% deployment success rate across staging and production environments.</p>
+                <p className="text-gray-600 leading-relaxed">Modernized company&apos;s development process by implementing comprehensive CI/CD pipelines using GitLab CI, Terraform for Infrastructure as Code, and automated testing frameworks. Reduced production bugs by 78%, decreased deployment time from 4 hours to 12 minutes, and achieved 95% deployment success rate across staging and production environments.</p>
               </div>
             </div>
           </div>
