@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays } from "lucide-react";
 import { LinkedInIcon } from "@/components/SocialLinks";
 import { formatDate, getPost, renderMarkdown } from "@/lib/posts";
 import { absoluteUrl, site } from "@/lib/site";
@@ -102,12 +102,23 @@ export default async function BlogPost({ params }: Props) {
         </div>
         <div className="flex shrink-0 flex-wrap gap-3">
           <ShareButton href={shareUrl} />
-          <Link
-            href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background hover:opacity-85"
-          >
-            Work with me <ArrowRight className="size-4" />
-          </Link>
+          {site.links.booking ? (
+            <a
+              href={site.links.booking}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background hover:opacity-85"
+            >
+              <CalendarDays className="size-4" /> Book a call
+            </a>
+          ) : (
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background hover:opacity-85"
+            >
+              Work with me <ArrowRight className="size-4" />
+            </Link>
+          )}
         </div>
       </footer>
     </article>

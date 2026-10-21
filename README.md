@@ -53,6 +53,6 @@ The site also publishes `/rss.xml` and `/sitemap.xml`.
 
 ## Configuration
 
-Name, email, location and social links live in `src/lib/site.ts`. The LinkedIn link is hidden until `links.linkedin` is set.
+Name, email, location and social links live in `src/lib/site.ts`. The "Book a call" buttons appear once `links.booking` is set (e.g. a Google Calendar appointment schedule, Calendly or Cal.com link), and the LinkedIn link once `links.linkedin` is set.
 
 If you move to a custom domain, set `url` in `src/lib/site.ts` (or `NEXT_PUBLIC_SITE_URL`) so canonical links and preview images use it.

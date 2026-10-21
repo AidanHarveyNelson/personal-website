@@ -4,6 +4,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   BrainCircuit,
+  CalendarDays,
   ChartColumn,
   CodeXml,
   Database,
@@ -239,9 +240,23 @@ export default function Home() {
             I&apos;m happy to have a no-obligation chat.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
+            {site.links.booking && (
+              <a
+                href={site.links.booking}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
+              >
+                <CalendarDays className="size-4" /> Book a call
+              </a>
+            )}
             <a
               href={`mailto:${site.email}?subject=${encodeURIComponent("Let's chat")}`}
-              className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
+              className={
+                site.links.booking
+                  ? "inline-flex items-center gap-2 rounded-full border border-background/25 px-6 py-3 text-sm font-medium transition-colors hover:bg-background/10"
+                  : "inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
+              }
             >
               Email me <ArrowRight className="size-4" />
             </a>
