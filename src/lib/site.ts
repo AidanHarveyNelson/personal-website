@@ -8,8 +8,8 @@ export const site = {
   email: "fizen2550@gmail.com",
   location: "Melbourne, Australia",
   links: {
-    booking: "",
-    linkedin: "",
+    booking: "https://calendar.app.google/RgkJWFChuzr8PeCV6",
+    linkedin: "https://www.linkedin.com/in/aidan-harvey-nelson-863145160/",
     github: "https://github.com/AidanHarveyNelson",
     credly: "https://www.credly.com/users/aidan-harvey-nelson.3565c4f2",
   },
