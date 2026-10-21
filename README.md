@@ -1,37 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aidan Harvey-Nelson Consulting
 
-## Getting Started
+Personal and consulting website with a blog, built with Next.js (static export) and Tailwind CSS, deployed to GitHub Pages on every push to `main`.
 
-First, run the development server:
+Live: https://aidanharveynelson.github.io/personal-website/
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000 (drafts are visible here)
+npm run build    # static export to ./out
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To preview a production build with the GitHub Pages base path:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+PAGES_BASE_PATH=/personal-website npm run build
+npx serve out    # then open /personal-website/ (serve the parent folder if needed)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Writing a blog post
 
-## Learn More
+1. Copy `content/blog/_template.md` to `content/blog/<slug>.md`. The file name becomes the URL: `/blog/<slug>/`.
+2. Fill in the frontmatter:
 
-To learn more about Next.js, take a look at the following resources:
+   | Field         | Required | Notes                                                                 |
+   | ------------- | -------- | --------------------------------------------------------------------- |
+   | `title`       | yes      | Also used on the generated LinkedIn/social preview image              |
+   | `description` | yes      | 1–2 sentences; shown on the blog index, in search and link previews   |
+   | `date`        | yes      | `YYYY-MM-DD`; posts are sorted newest first                          |
+   | `updated`     | no       | `YYYY-MM-DD`; sets the modified date for SEO                          |
+   | `tags`        | no       | e.g. `["Snowflake", "Data Engineering"]`                              |
+   | `draft`       | no       | `true` hides the post from production builds                         |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Write in Markdown (GitHub-flavoured: tables, task lists, fenced code blocks with syntax highlighting).
+4. Push to `main`. The site rebuilds and deploys automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Files starting with `_` are never published.
 
-## Deploy on Vercel
+### Sharing on LinkedIn
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Every post gets:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# personal-website
+- a canonical URL, e.g. `https://aidanharveynelson.github.io/personal-website/blog/<slug>/`
+- an auto-generated 1200×630 preview image (`/blog/<slug>/og.png`) with the title
+- Open Graph / Twitter tags, so LinkedIn shows the title, description and image
+- a "Share on LinkedIn" button at the top and bottom of the article
+
+Paste the post URL into a LinkedIn post and the preview card appears. If LinkedIn shows an old preview after you edit a post, refresh it with the [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/).
+
+The site also publishes `/rss.xml` and `/sitemap.xml`.
+
+## Configuration
+
+Name, email, location and social links live in `src/lib/site.ts`. The "Book a call" buttons appear once `links.booking` is set (e.g. a Google Calendar appointment schedule, Calendly or Cal.com link), and the LinkedIn link once `links.linkedin` is set.
+
+If you move to a custom domain, set `url` in `src/lib/site.ts` (or `NEXT_PUBLIC_SITE_URL`) so canonical links and preview images use it.
