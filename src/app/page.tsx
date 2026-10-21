@@ -131,9 +131,9 @@ export default function Home() {
 
         <dl className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
           {stats.map((s) => (
-            <div key={s.label} className="bg-background p-6">
+            <div key={s.label} className="bg-stat p-6">
               <dt className="text-sm leading-snug text-muted">{s.label}</dt>
-              <dd className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">{s.value}</dd>
+              <dd className="mt-2 text-2xl font-semibold tracking-tight text-stat-value sm:text-3xl">{s.value}</dd>
             </div>
           ))}
         </dl>
@@ -230,7 +230,7 @@ export default function Home() {
       </Section>
 
       <section id="contact" className="mx-auto max-w-5xl px-5 py-20 sm:px-8">
-        <div className="rounded-3xl bg-foreground px-8 py-14 text-background sm:px-14 sm:py-16">
+        <div className="rounded-3xl bg-panel px-8 py-14 text-panel-fg sm:px-14 sm:py-16">
           <p className="text-sm font-medium opacity-60">Contact</p>
           <h2 className="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
             Have a data problem worth solving? Let&apos;s talk.
@@ -245,7 +245,7 @@ export default function Home() {
                 href={site.links.booking}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-full bg-panel-fg px-6 py-3 text-sm font-medium text-panel transition-opacity hover:opacity-90"
               >
                 <CalendarDays className="size-4" /> Book a call
               </a>
@@ -254,8 +254,8 @@ export default function Home() {
               href={`mailto:${site.email}?subject=${encodeURIComponent("Let's chat")}`}
               className={
                 site.links.booking
-                  ? "inline-flex items-center gap-2 rounded-full border border-background/25 px-6 py-3 text-sm font-medium transition-colors hover:bg-background/10"
-                  : "inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
+                  ? "inline-flex items-center gap-2 rounded-full border border-panel-fg/25 px-6 py-3 text-sm font-medium transition-colors hover:bg-panel-fg/10"
+                  : "inline-flex items-center gap-2 rounded-full bg-panel-fg px-6 py-3 text-sm font-medium text-panel transition-opacity hover:opacity-90"
               }
             >
               Email me <ArrowRight className="size-4" />
@@ -265,7 +265,7 @@ export default function Home() {
                 href={site.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-background/25 px-6 py-3 text-sm font-medium transition-colors hover:bg-background/10"
+                className="inline-flex items-center gap-2 rounded-full border border-panel-fg/25 px-6 py-3 text-sm font-medium transition-colors hover:bg-panel-fg/10"
               >
                 Connect on LinkedIn <ArrowUpRight className="size-4" />
               </a>
